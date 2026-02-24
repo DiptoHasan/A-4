@@ -23,14 +23,14 @@
         }
     </style>
 </head>
-<body class="bg-[#F8FAFC]">
+<body class="bg-[#F8FAFC] pb-15">
      <!-- Header Section -->
      <Section class="w-[70%] mx-auto grid gap-5">
         <h1 class="font-bold text-[32px] mt-15">Job Application Tracker</h1>
         <div class="grid grid-cols-3 space-x-4">
             <div class="bg-white p-5 rounded-md">
                 <p>Total</p>
-                <p class="font-bold text-[24px]" id="total">8</p>
+                <p class="font-bold text-[24px]" id="total">0</p>
             </div>
             <div class="bg-white p-5 rounded-md">
                 <p>Interview</p>
@@ -47,149 +47,153 @@
      <main class="w-[70%] mx-auto">
         <h2 class="font-semibold text-[20px] my-7">Available Jobs</h2>
         <div class="flex gap-2 mb-4">
-            <p class="btn text-white bg-primary font-semibold" id="allFilter">All</p>
-            <p class="btn text-[#64748B]" id="interviewFilter">Interview</p>
-            <p class="btn text-[#64748B]" id="rejectedFilter">Rejected</p>
+            <p onclick="toggleStyle('allFilter')" class="btn text-[#64748B]" id="allFilter">All</p>
+            <p onclick="toggleStyle('interviewFilter')" class="btn text-[#64748B]" id="interviewFilter">Interview</p>
+            <p onclick="toggleStyle('rejectedFilter')" class="btn text-[#64748B]" id="rejectedFilter">Rejected</p>
         </div>
 
      <!-- Jobs Section -->
-      <!-- Job 1 -->
-        <div class="bg-white flex p-6 mb-4">
-            <div class="left">
-                <h3 class="font-semibold text-[18px] mb-4">Mobile First Corp</h3>
-                <p class="text-[#64748B] mb-5">React Native Developer</p>
-                <p class="text-[#64748B] mb-5"> Remote • Full-time • $130,000 - $175,000</p>
-                <p class="font-medium bg-[#EEF4FF] mb-2 text-[#002C5C] px-3 py-2 w-[113px] h-[36px] rounded-sm">Not Applied</p>
-                <p class="mb-5 text-[#323B49]">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
-                <div>
-                    <button class="btn text-green-500 border-green-500">INTERVIEW</button>
-                    <button class="btn text-red-500 border-red-500">REJECTED</button>
-                </div>
-            </div>
-            <div class="right">
-                <span class="bg-gray-200 p-1 rounded-md"><i class="fa-regular fa-trash-can"></i></span>
-            </div>
-        </div>
-      <!-- Job 2 -->
-        <div class="bg-white flex p-6 mb-4">
-            <div class="left">
-                <h3 class="font-semibold text-[18px] mb-4">PixelForge Studios</h3>
-                <p class="text-[#64748B] mb-5">Frontend Developer</p>
-                <p class="text-[#64748B] mb-5"> Remote • Full-time • $100,000 - $135,000</p>
-                <p class="font-medium bg-[#EEF4FF] mb-2 text-[#002C5C] px-3 py-2 w-[113px] h-[36px] rounded-sm">Not Applied</p>
-                <p class="mb-5 text-[#323B49]">Build responsive, high-performance web interfaces using React and TypeScript. Collaborate with design teams to implement modern UI/UX best practices.</p>
-                <div>
-                    <button class="btn text-green-500 border-green-500">INTERVIEW</button>
-                    <button class="btn text-red-500 border-red-500">REJECTED</button>
-                </div>
-            </div>
-            <div class="right">
-                <span class="bg-gray-200 p-1 rounded-md"><i class="fa-regular fa-trash-can"></i></span>
-            </div>
-        </div>
-      <!-- Job 3 -->
-        <div class="bg-white flex p-6 mb-4">
-            <div class="left">
-                <h3 class="font-semibold text-[18px] mb-4">DataBridge Solutions</h3>
-                <p class="text-[#64748B] mb-5">Backend Developer</p>
-                <p class="text-[#64748B] mb-5"> Remote • Full-time • $110,000 - $145,000</p>
-                <p class="font-medium bg-[#EEF4FF] mb-2 text-[#002C5C] px-3 py-2 w-[113px] h-[36px] rounded-sm">Not Applied</p>
-                <p class="mb-5 text-[#323B49]">Develop scalable APIs and microservices using Node.js and PostgreSQL. Optimize server performance and maintain cloud infrastructure.</p>
-                <div>
-                    <button class="btn text-green-500 border-green-500">INTERVIEW</button>
-                    <button class="btn text-red-500 border-red-500">REJECTED</button>
-                </div>
-            </div>
-            <div class="right">
-                <span class="bg-gray-200 p-1 rounded-md"><i class="fa-regular fa-trash-can"></i></span>
-            </div>
-        </div>
-      <!-- Job 4 -->
-        <div class="bg-white flex p-6 mb-4">
-            <div class="left">
-                <h3 class="font-semibold text-[18px] mb-4">Skyline Interactive</h3>
-                <p class="text-[#64748B] mb-5">Full Stack Developer</p>
-                <p class="text-[#64748B] mb-5"> Remote • Full-time • $115,000 - $155,000</p>
-                <p class="font-medium bg-[#EEF4FF] mb-2 text-[#002C5C] px-3 py-2 w-[113px] h-[36px] rounded-sm">Not Applied</p>
-                <p class="mb-5 text-[#323B49]">Work across the stack building modern web applications with React and Node.js. Contribute to architecture decisions and CI/CD workflows.</p>
-                <div>
-                    <button class="btn text-green-500 border-green-500">INTERVIEW</button>
-                    <button class="btn text-red-500 border-red-500">REJECTED</button>
-                </div>
-            </div>
-            <div class="right">
-                <span class="bg-gray-200 p-1 rounded-md"><i class="fa-regular fa-trash-can"></i></span>
-            </div>
-        </div>
-      <!-- Job 5 -->
-        <div class="bg-white flex p-6 mb-4">
-            <div class="left">
-                <h3 class="font-semibold text-[18px] mb-4">Nimbus Web Labs</h3>
-                <p class="text-[#64748B] mb-5">WordPress Developer</p>
-                <p class="text-[#64748B] mb-5"> Remote • Full-time • $85,000 - $115,000</p>
-                <p class="font-medium bg-[#EEF4FF] mb-2 text-[#002C5C] px-3 py-2 w-[113px] h-[36px] rounded-sm">Not Applied</p>
-                <p class="mb-5 text-[#323B49]">Design and customize WordPress themes and plugins. Ensure website performance, SEO optimization, and security best practices.</p>
-                <div>
-                    <button class="btn text-green-500 border-green-500">INTERVIEW</button>
-                    <button class="btn text-red-500 border-red-500">REJECTED</button>
-                </div>
-            </div>
-            <div class="right">
-                <span class="bg-gray-200 p-1 rounded-md"><i class="fa-regular fa-trash-can"></i></span>
-            </div>
-        </div>
-      <!-- Job 6 -->
-        <div class="bg-white flex p-6 mb-4">
-            <div class="left">
-                <h3 class="font-semibold text-[18px] mb-4">QuantumSoft Technologies</h3>
-                <p class="text-[#64748B] mb-5">DevOps Engineer (Web Platforms)</p>
-                <p class="text-[#64748B] mb-5"> Remote • Full-time • $120,000 - $165,000</p>
-                <p class="font-medium bg-[#EEF4FF] mb-2 text-[#002C5C] px-3 py-2 w-[113px] h-[36px] rounded-sm">Not Applied</p>
-                <p class="mb-5 text-[#323B49]">Manage deployment pipelines and cloud hosting environments. Automate infrastructure using Docker, Kubernetes, and AWS.</p>
-                <div>
-                    <button class="btn text-green-500 border-green-500">INTERVIEW</button>
-                    <button class="btn text-red-500 border-red-500">REJECTED</button>
-                </div>
-            </div>
-            <div class="right">
-                <span class="bg-gray-200 p-1 rounded-md"><i class="fa-regular fa-trash-can"></i></span>
-            </div>
-        </div>
-      <!-- Job 7 -->
-        <div class="bg-white flex p-6 mb-4">
-            <div class="left">
-                <h3 class="font-semibold text-[18px] mb-4">BrightLayer Digital</h3>
-                <p class="text-[#64748B] mb-5">UI/UX Web Developer</p>
-                <p class="text-[#64748B] mb-5"> Remote • Full-time • $95,000 - $125,000</p>
-                <p class="font-medium bg-[#EEF4FF] mb-2 text-[#002C5C] px-3 py-2 w-[113px] h-[36px] rounded-sm">Not Applied</p>
-                <p class="mb-5 text-[#323B49]">Transform design mockups into interactive web experiences. Focus on accessibility, performance optimization, and responsive layouts.</p>
-                <div>
-                    <button class="btn text-green-500 border-green-500">INTERVIEW</button>
-                    <button class="btn text-red-500 border-red-500">REJECTED</button>
-                </div>
-            </div>
-            <div class="right">
-                <span class="bg-gray-200 p-1 rounded-md"><i class="fa-regular fa-trash-can"></i></span>
-            </div>
-        </div>
-      <!-- Job 8 -->
-        <div class="bg-white flex p-6 mb-4">
-            <div class="left">
-                <h3 class="font-semibold text-[18px] mb-4">CodeCraft Systems</h3>
-                <p class="text-[#64748B] mb-5">E-commerce Web Developer</p>
-                <p class="text-[#64748B] mb-5"> Remote • Full-time • $110,000 - $145,000</p>
-                <p class="font-medium bg-[#EEF4FF] mb-2 text-[#002C5C] px-3 py-2 w-[113px] h-[36px] rounded-sm">Not Applied</p>
-                <p class="mb-5 text-[#323B49]">Develop and maintain scalable e-commerce platforms using Shopify and custom web solutions. Integrate payment gateways and third-party services.</p>
-                <div>
-                    <button class="btn text-green-500 border-green-500">INTERVIEW</button>
-                    <button class="btn text-red-500 border-red-500">REJECTED</button>
-                </div>
-            </div>
-            <div class="right">
-                <span class="bg-gray-200 p-1 rounded-md"><i class="fa-regular fa-trash-can"></i></span>
-            </div>
-        </div>
+        <section id="jobsCont">
+            <!-- Job 1 -->
+              <div class="bg-white flex justify-between p-6 mb-4">
+                  <div class="left">
+                      <h3 class="font-semibold text-[18px] mb-4">Mobile First Corp</h3>
+                      <p class="text-[#64748B] mb-5">React Native Developer</p>
+                      <p class="text-[#64748B] mb-5"> Remote • Full-time • $130,000 - $175,000</p>
+                      <p class="font-medium bg-[#EEF4FF] mb-2 text-[#002C5C] px-3 py-2 w-[113px] h-[36px] rounded-sm">Not Applied</p>
+                      <p class="mb-5 text-[#323B49]">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
+                      <div>
+                          <button class="btn text-green-500 border-green-500">INTERVIEW</button>
+                          <button class="btn text-red-500 border-red-500">REJECTED</button>
+                      </div>
+                  </div>
+                  <div class="right">
+                      <span class="bg-gray-200 p-1 rounded-full"><i class="fa-regular fa-trash-can"></i></span>
+                  </div>
+              </div>
+            <!-- Job 2 -->
+              <div class="bg-white flex justify-between p-6 mb-4">
+                  <div class="left">
+                      <h3 class="font-semibold text-[18px] mb-4">PixelForge Studios</h3>
+                      <p class="text-[#64748B] mb-5">Frontend Developer</p>
+                      <p class="text-[#64748B] mb-5"> Remote • Full-time • $100,000 - $135,000</p>
+                      <p class="font-medium bg-[#EEF4FF] mb-2 text-[#002C5C] px-3 py-2 w-[113px] h-[36px] rounded-sm">Not Applied</p>
+                      <p class="mb-5 text-[#323B49]">Build responsive, high-performance web interfaces using React and TypeScript. Collaborate with design teams to implement modern UI/UX best practices.</p>
+                      <div>
+                          <button class="btn text-green-500 border-green-500">INTERVIEW</button>
+                          <button class="btn text-red-500 border-red-500">REJECTED</button>
+                      </div>
+                  </div>
+                  <div class="right">
+                      <span class="bg-gray-200 p-1 rounded-full"><i class="fa-regular fa-trash-can"></i></span>
+                  </div>
+              </div>
+            <!-- Job 3 -->
+              <div class="bg-white flex justify-between p-6 mb-4">
+                  <div class="left">
+                      <h3 class="font-semibold text-[18px] mb-4">DataBridge Solutions</h3>
+                      <p class="text-[#64748B] mb-5">Backend Developer</p>
+                      <p class="text-[#64748B] mb-5"> Remote • Full-time • $110,000 - $145,000</p>
+                      <p class="font-medium bg-[#EEF4FF] mb-2 text-[#002C5C] px-3 py-2 w-[113px] h-[36px] rounded-sm">Not Applied</p>
+                      <p class="mb-5 text-[#323B49]">Develop scalable APIs and microservices using Node.js and PostgreSQL. Optimize server performance and maintain cloud infrastructure.</p>
+                      <div>
+                          <button class="btn text-green-500 border-green-500">INTERVIEW</button>
+                          <button class="btn text-red-500 border-red-500">REJECTED</button>
+                      </div>
+                  </div>
+                  <div class="right">
+                      <span class="bg-gray-200 p-1 rounded-full"><i class="fa-regular fa-trash-can"></i></span>
+                  </div>
+              </div>
+            <!-- Job 4 -->
+              <div class="bg-white flex justify-between p-6 mb-4">
+                  <div class="left">
+                      <h3 class="font-semibold text-[18px] mb-4">Skyline Interactive</h3>
+                      <p class="text-[#64748B] mb-5">Full Stack Developer</p>
+                      <p class="text-[#64748B] mb-5"> Remote • Full-time • $115,000 - $155,000</p>
+                      <p class="font-medium bg-[#EEF4FF] mb-2 text-[#002C5C] px-3 py-2 w-[113px] h-[36px] rounded-sm">Not Applied</p>
+                      <p class="mb-5 text-[#323B49]">Work across the stack building modern web applications with React and Node.js. Contribute to architecture decisions and CI/CD workflows.</p>
+                      <div>
+                          <button class="btn text-green-500 border-green-500">INTERVIEW</button>
+                          <button class="btn text-red-500 border-red-500">REJECTED</button>
+                      </div>
+                  </div>
+                  <div class="right">
+                      <span class="bg-gray-200 p-1 rounded-full"><i class="fa-regular fa-trash-can"></i></span>
+                  </div>
+              </div>
+            <!-- Job 5 -->
+              <div class="bg-white flex justify-between p-6 mb-4">
+                  <div class="left">
+                      <h3 class="font-semibold text-[18px] mb-4">Nimbus Web Labs</h3>
+                      <p class="text-[#64748B] mb-5">WordPress Developer</p>
+                      <p class="text-[#64748B] mb-5"> Remote • Full-time • $85,000 - $115,000</p>
+                      <p class="font-medium bg-[#EEF4FF] mb-2 text-[#002C5C] px-3 py-2 w-[113px] h-[36px] rounded-sm">Not Applied</p>
+                      <p class="mb-5 text-[#323B49]">Design and customize WordPress themes and plugins. Ensure website performance, SEO optimization, and security best practices.</p>
+                      <div>
+                          <button class="btn text-green-500 border-green-500">INTERVIEW</button>
+                          <button class="btn text-red-500 border-red-500">REJECTED</button>
+                      </div>
+                  </div>
+                  <div class="right">
+                      <span class="bg-gray-200 p-1 rounded-full"><i class="fa-regular fa-trash-can"></i></span>
+                  </div>
+              </div>
+            <!-- Job 6 -->
+              <div class="bg-white flex justify-between p-6 mb-4">
+                  <div class="left">
+                      <h3 class="font-semibold text-[18px] mb-4">QuantumSoft Technologies</h3>
+                      <p class="text-[#64748B] mb-5">DevOps Engineer (Web Platforms)</p>
+                      <p class="text-[#64748B] mb-5"> Remote • Full-time • $120,000 - $165,000</p>
+                      <p class="font-medium bg-[#EEF4FF] mb-2 text-[#002C5C] px-3 py-2 w-[113px] h-[36px] rounded-sm">Not Applied</p>
+                      <p class="mb-5 text-[#323B49]">Manage deployment pipelines and cloud hosting environments. Automate infrastructure using Docker, Kubernetes, and AWS.</p>
+                      <div>
+                          <button class="btn text-green-500 border-green-500">INTERVIEW</button>
+                          <button class="btn text-red-500 border-red-500">REJECTED</button>
+                      </div>
+                  </div>
+                  <div class="right">
+                      <span class="bg-gray-200 p-1 rounded-full"><i class="fa-regular fa-trash-can"></i></span>
+                  </div>
+              </div>
+            <!-- Job 7 -->
+              <div class="bg-white flex justify-between p-6 mb-4">
+                  <div class="left">
+                      <h3 class="font-semibold text-[18px] mb-4">BrightLayer Digital</h3>
+                      <p class="text-[#64748B] mb-5">UI/UX Web Developer</p>
+                      <p class="text-[#64748B] mb-5"> Remote • Full-time • $95,000 - $125,000</p>
+                      <p class="font-medium bg-[#EEF4FF] mb-2 text-[#002C5C] px-3 py-2 w-[113px] h-[36px] rounded-sm">Not Applied</p>
+                      <p class="mb-5 text-[#323B49]">Transform design mockups into interactive web experiences. Focus on accessibility, performance optimization, and responsive layouts.</p>
+                      <div>
+                          <button class="btn text-green-500 border-green-500">INTERVIEW</button>
+                          <button class="btn text-red-500 border-red-500">REJECTED</button>
+                      </div>
+                  </div>
+                  <div class="right">
+                      <span class="bg-gray-200 p-1 rounded-full"><i class="fa-regular fa-trash-can"></i></span>
+                  </div>
+              </div>
+            <!-- Job 8 -->
+              <div class="bg-white flex justify-between p-6">
+                  <div class="left">
+                      <h3 class="font-semibold text-[18px] mb-4">CodeCraft Systems</h3>
+                      <p class="text-[#64748B] mb-5">E-commerce Web Developer</p>
+                      <p class="text-[#64748B] mb-5"> Remote • Full-time • $110,000 - $145,000</p>
+                      <p class="font-medium bg-[#EEF4FF] mb-2 text-[#002C5C] px-3 py-2 w-[113px] h-[36px] rounded-sm">Not Applied</p>
+                      <p class="mb-5 text-[#323B49]">Develop and maintain scalable e-commerce platforms using Shopify and custom web solutions. Integrate payment gateways and third-party services.</p>
+                      <div>
+                          <button class="btn text-green-500 border-green-500">INTERVIEW</button>
+                          <button class="btn text-red-500 border-red-500">REJECTED</button>
+                      </div>
+                  </div>
+                  <div class="right">
+                      <span class="bg-gray-200 p-1 rounded-full"><i class="fa-regular fa-trash-can"></i></span>
+                  </div>
+              </div>
+        </section>
 
      </main>
+
+     <script src="script.js"></script>
 </body>
 </html>
