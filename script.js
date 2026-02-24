@@ -34,3 +34,24 @@ function toggleStyle(id){
     selected.classList.remove('text-[#64748B]');
     selected.classList.add ('text-white', 'bg-primary', 'font-semibold');
 }
+
+mainContainer.addEventListener('click', function(event){
+
+    const parenNode = event.target.parentNode.parentNode;
+
+    const comp = parenNode.querySelector('.company').innerText;
+    const pos = parenNode.querySelector('.position').innerText;
+    const loc = parenNode.querySelector('.location').innerText;
+    const stat = parenNode.querySelector('.statu').innerText;
+    const des = parenNode.querySelector('.description').innerText;
+
+    const cardInfo = {
+        comp,
+        pos,
+        loc,
+        stat,
+        des
+    }
+
+    console.log(cardInfo)
+})
