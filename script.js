@@ -1,57 +1,42 @@
-let interviewList= [];
-let rejectList = [];
+let currentTab = "all";
+const tabActive = ['text-white', 'bg-primary', 'font-semibold'];
+const tabInactive = ['text-[#64748B]'];
 
-let total = document.getElementById('total');
-let interview = document.getElementById('interviewCount');
-let reject = document.getElementById('rejectCount');
+const allContainer = document.getElementById("allCont");
+const interviewContainer = document.getElementById("interviewCont");
+const rejectContainer = document.getElementById("rejectCont");
 
-const jobsCont= document.getElementById('jobsCont');
-let totalJobs=jobsCont.children.length;
-const mainContainer= document.querySelector('main');
+function switchTab(tab){
+    
+    const tabs = ["all", "interview", "rejected"];
 
-const allFilter= document.getElementById('allFilter');
-const interviewFilter= document.getElementById('interviewFilter');
-const rejectedFilter= document.getElementById('rejectedFilter');
-
-function calcCount (){
-    total.innerText = totalJobs;
-    interviewCount.innerText = interviewList.length;
-    rejectCount.innerText = rejectList.length;
-}
-calcCount ();
-
-function toggleStyle(id){
-    allFilter.classList.remove('text-white', 'bg-primary', 'font-semibold');
-    interviewFilter.classList.remove('text-white', 'bg-primary', 'font-semibold');
-    rejectedFilter.classList.remove('text-white', 'bg-primary', 'font-semibold');
-
-    allFilter.classList.add('text-[#64748B]')
-    interviewFilter.classList.add('text-[#64748B]')
-    rejectedFilter.classList.add('text-[#64748B]')
-
-    const selected = document.getElementById(id);
-
-    selected.classList.remove('text-[#64748B]');
-    selected.classList.add ('text-white', 'bg-primary', 'font-semibold');
-}
-
-mainContainer.addEventListener('click', function(event){
-
-    const parenNode = event.target.parentNode.parentNode;
-
-    const comp = parenNode.querySelector('.company').innerText;
-    const pos = parenNode.querySelector('.position').innerText;
-    const loc = parenNode.querySelector('.location').innerText;
-    const stat = parenNode.querySelector('.statu').innerText;
-    const des = parenNode.querySelector('.description').innerText;
-
-    const cardInfo = {
-        comp,
-        pos,
-        loc,
-        stat,
-        des
+    for (const t of tabs) {
+        const tabName = document.getElementById("tab-"+ t);
+        if(t === tab){
+            tabName.classList.remove(...tabInactive);
+            tabName.classList.add(...tabActive);
+        }
+        else{
+            tabName.classList.remove(...tabActive);
+            tabName.classList.add(...tabInactive);
+        }
     }
+    const pages = [allContainer, interviewContainer, rejectContainer];
 
-    console.log(cardInfo)
-})
+    for (const section of pages) {
+        section.classList.add("hidden")
+    }
+    if (tab === "all") {
+        allContainer.classList.remove("hidden");
+    }
+    else if(tab === "interview"){
+        interviewContainer.classList.remove("hidden");
+    }
+    else{
+        rejectContainer.classList.remove("hidden");
+    }
+}
+
+switchTab(currentTab);
+
+
