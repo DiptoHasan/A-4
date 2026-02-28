@@ -30,22 +30,25 @@
         <div class="grid grid-cols-3 space-x-4">
             <div class="bg-white p-5 rounded-md">
                 <p>Total</p>
-                <p class="font-bold text-[24px]" id="total">0</p>
+                <p class="font-bold text-[24px]" id="stat-total">0</p>
             </div>
             <div class="bg-white p-5 rounded-md">
                 <p>Interview</p>
-                <p class="font-bold text-[24px] text-green-600" id="interviewCount">0</p>
+                <p class="font-bold text-[24px] text-green-600" id="stat-interview">0</p>
             </div>
             <div class="bg-white p-5 rounded-md">
                 <p>Rejected</p>
-                <p class="font-bold text-[24px] text-red-600" id="rejectCount">0</p>
+                <p class="font-bold text-[24px] text-red-600" id="stat-reject">0</p>
             </div>
         </div>
         <hr class="mt-7.5 text-[#E6E7E9]">
      </Section>
      <!-- Main Section -->
      <main class="w-[70%] mx-auto">
-        <h2 class="font-semibold text-[20px] my-7">Available Jobs</h2>
+        <div class="flex items-center justify-between flex-wrap gap-2 mb-4">
+            <h2 class="font-semibold text-[20px] my-7">Available Jobs</h2>
+            <span class="text-sm text-slate-500 font-medium"><span id="available">8</span> jobs</span>
+        </div>
         <div class="flex gap-2 mb-4">
             <p onclick="switchTab('all')" class="btn text-[#64748B]" id="tab-all">All</p>
             <p onclick="switchTab('interview')" class="btn text-[#64748B]" id="tab-interview">Interview</p>
@@ -64,12 +67,12 @@
                           <p class="font-medium bg-[#EEF4FF] mb-2 text-[#002C5C] px-3 py-2 w-[113px] h-[36px] rounded-sm statu">Not Applied</p>
                           <p class="mb-5 text-[#323B49] description">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
                           <div>
-                              <button class="btn text-green-500 border-green-500">INTERVIEW</button>
-                              <button class="btn text-red-500 border-red-500">REJECTED</button>
+                              <button class="btn text-green-500 border-green-500 interview">INTERVIEW</button>
+                              <button class="btn text-red-500 border-red-500 reject">REJECTED</button>
                           </div>
                       </div>
                       <div class="right">
-                          <span class="bg-gray-200 p-1 rounded-full del"><i class="fa-regular fa-trash-can"></i></span>
+                          <span class="bg-gray-200 p-1 rounded-full "><i class="fa-regular fa-trash-can del"></i></span>
                       </div>
                   </div>
                 <!-- Job 2 -->
@@ -81,12 +84,12 @@
                           <p class="font-medium bg-[#EEF4FF] mb-2 text-[#002C5C] px-3 py-2 w-[113px] h-[36px] rounded-sm statu">Not Applied</p>
                           <p class="mb-5 text-[#323B49] description">Build responsive, high-performance web interfaces using React and TypeScript. Collaborate with design teams to implement modern UI/UX best practices.</p>
                           <div>
-                              <button class="btn text-green-500 border-green-500">INTERVIEW</button>
-                              <button class="btn text-red-500 border-red-500">REJECTED</button>
+                              <button class="btn text-green-500 border-green-500 interview">INTERVIEW</button>
+                              <button class="btn text-red-500 border-red-500 reject">REJECTED</button>
                           </div>
                       </div>
                       <div class="right">
-                          <span class="bg-gray-200 p-1 rounded-full del"><i class="fa-regular fa-trash-can"></i></span>
+                          <span class="bg-gray-200 p-1 rounded-full "><i class="fa-regular fa-trash-can del"></i></span>
                       </div>
                   </div>
                 <!-- Job 3 -->
@@ -98,12 +101,12 @@
                           <p class="statu font-medium bg-[#EEF4FF] mb-2 text-[#002C5C] px-3 py-2 w-[113px] h-[36px] rounded-sm">Not Applied</p>
                           <p class="mb-5 text-[#323B49] description">Develop scalable APIs and microservices using Node.js and PostgreSQL. Optimize server performance and maintain cloud infrastructure.</p>
                           <div>
-                              <button class="btn text-green-500 border-green-500">INTERVIEW</button>
-                              <button class="btn text-red-500 border-red-500">REJECTED</button>
+                              <button class="btn text-green-500 border-green-500 interview">INTERVIEW</button>
+                              <button class="btn text-red-500 border-red-500 reject">REJECTED</button>
                           </div>
                       </div>
                       <div class="right">
-                          <span class="bg-gray-200 p-1 rounded-full del"><i class="fa-regular fa-trash-can"></i></span>
+                          <span class="bg-gray-200 p-1 rounded-full del"><i class="fa-regular fa-trash-can del"></i></span>
                       </div>
                   </div>
                 <!-- Job 4 -->
@@ -115,12 +118,12 @@
                           <p class="statu font-medium bg-[#EEF4FF] mb-2 text-[#002C5C] px-3 py-2 w-[113px] h-[36px] rounded-sm">Not Applied</p>
                           <p class="mb-5 text-[#323B49] description">Work across the stack building modern web applications with React and Node.js. Contribute to architecture decisions and CI/CD workflows.</p>
                           <div>
-                              <button class="btn text-green-500 border-green-500">INTERVIEW</button>
-                              <button class="btn text-red-500 border-red-500">REJECTED</button>
+                              <button class="btn text-green-500 border-green-500 interview">INTERVIEW</button>
+                              <button class="btn text-red-500 border-red-500 reject">REJECTED</button>
                           </div>
                       </div>
                       <div class="right">
-                          <span class="bg-gray-200 p-1 rounded-full del"><i class="fa-regular fa-trash-can"></i></span>
+                          <span class="bg-gray-200 p-1 rounded-full del"><i class="fa-regular fa-trash-can del"></i></span>
                       </div>
                   </div>
                 <!-- Job 5 -->
@@ -132,12 +135,12 @@
                           <p class="statu font-medium bg-[#EEF4FF] mb-2 text-[#002C5C] px-3 py-2 w-[113px] h-[36px] rounded-sm">Not Applied</p>
                           <p class="mb-5 text-[#323B49] description">Design and customize WordPress themes and plugins. Ensure website performance, SEO optimization, and security best practices.</p>
                           <div>
-                              <button class="btn text-green-500 border-green-500">INTERVIEW</button>
-                              <button class="btn text-red-500 border-red-500">REJECTED</button>
+                              <button class="btn text-green-500 border-green-500 interview">INTERVIEW</button>
+                              <button class="btn text-red-500 border-red-500 reject">REJECTED</button>
                           </div>
                       </div>
                       <div class="right">
-                          <span class="bg-gray-200 p-1 rounded-full del"><i class="fa-regular fa-trash-can"></i></span>
+                          <span class="bg-gray-200 p-1 rounded-full del"><i class="fa-regular fa-trash-can del"></i></span>
                       </div>
                   </div>
                 <!-- Job 6 -->
@@ -149,12 +152,12 @@
                           <p class="statu font-medium bg-[#EEF4FF] mb-2 text-[#002C5C] px-3 py-2 w-[113px] h-[36px] rounded-sm">Not Applied</p>
                           <p class="mb-5 text-[#323B49] description">Manage deployment pipelines and cloud hosting environments. Automate infrastructure using Docker, Kubernetes, and AWS.</p>
                           <div>
-                              <button class="btn text-green-500 border-green-500">INTERVIEW</button>
-                              <button class="btn text-red-500 border-red-500">REJECTED</button>
+                              <button class="btn text-green-500 border-green-500 interview">INTERVIEW</button>
+                              <button class="btn text-red-500 border-red-500 reject">REJECTED</button>
                           </div>
                       </div>
                       <div class="right">
-                          <span class="bg-gray-200 p-1 rounded-full del"><i class="fa-regular fa-trash-can"></i></span>
+                          <span class="bg-gray-200 p-1 rounded-full del"><i class="fa-regular fa-trash-can del"></i></span>
                       </div>
                   </div>
                 <!-- Job 7 -->
@@ -166,12 +169,12 @@
                           <p class="statu font-medium bg-[#EEF4FF] mb-2 text-[#002C5C] px-3 py-2 w-[113px] h-[36px] rounded-sm">Not Applied</p>
                           <p class="mb-5 text-[#323B49] description">Transform design mockups into interactive web experiences. Focus on accessibility, performance optimization, and responsive layouts.</p>
                           <div>
-                              <button class="btn text-green-500 border-green-500">INTERVIEW</button>
-                              <button class="btn text-red-500 border-red-500">REJECTED</button>
+                              <button class="btn text-green-500 border-green-500 interview">INTERVIEW</button>
+                              <button class="btn text-red-500 border-red-500 reject">REJECTED</button>
                           </div>
                       </div>
                       <div class="right">
-                          <span class="bg-gray-200 p-1 rounded-full del"><i class="fa-regular fa-trash-can"></i></span>
+                          <span class="bg-gray-200 p-1 rounded-full del"><i class="fa-regular fa-trash-can del"></i></span>
                       </div>
                   </div>
                 <!-- Job 8 -->
@@ -183,23 +186,23 @@
                           <p class="statu font-medium bg-[#EEF4FF] mb-2 text-[#002C5C] px-3 py-2 w-[113px] h-[36px] rounded-sm">Not Applied</p>
                           <p class="mb-5 text-[#323B49] description">Develop and maintain scalable e-commerce platforms using Shopify and custom web solutions. Integrate payment gateways and third-party services.</p>
                           <div>
-                              <button class="btn text-green-500 border-green-500">INTERVIEW</button>
-                              <button class="btn text-red-500 border-red-500">REJECTED</button>
+                              <button class="btn text-green-500 border-green-500 interview">INTERVIEW</button>
+                              <button class="btn text-red-500 border-red-500 reject">REJECTED</button>
                           </div>
                       </div>
                       <div class="right">
-                          <span class="bg-gray-200 p-1 rounded-full del"><i class="fa-regular fa-trash-can"></i></span>
+                          <span class="bg-gray-200 p-1 rounded-full del"><i class="fa-regular fa-trash-can del"></i></span>
                       </div>
                   </div>
             </div>
-            <section class="hidden" id="interviewCont">Interview Section</section>
-            <section class="hidden" id="rejectCont">Reject Section</section>
+            <section class="hidden" id="interviewCont"></section>
+            <section class="hidden" id="rejectCont"></section>
         </section>
         <!-- Empty State -->
-        <div id="empty-state" class="hidden flex-col items-center justify-center py-20 gap-4 text-center">
+        <div id="emptyState" class="flex-col items-center justify-center py-15 px-10 bg-white gap-4 text-center">
             <div><img src="jobs.png" alt=""></div>
-            <p class="font-syne text-lg font-bold text-navy">No Jobs Available</p>
-            <p>Check back soon for new job opportunities</p>
+            <p class="text-lg font-semibold text-[24px] text-[#002C5C]">No Jobs Available</p>
+            <p class="text-[#64748B]">Check back soon for new job opportunities</p>
         </div>
 
      </main>
